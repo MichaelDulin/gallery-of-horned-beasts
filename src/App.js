@@ -38,7 +38,6 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <p onClick={this.handleOpenModal}></p>
         <Container>
           <Row>
             <Main data={data} handleOpenModal={this.handleOpenModal} />

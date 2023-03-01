@@ -1,7 +1,3 @@
-body {
-  background-color: rgb(191, 191, 191);
-}
-
 main {
   display: flex;
   flex-wrap: wrap;

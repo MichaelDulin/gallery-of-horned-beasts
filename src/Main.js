@@ -19,17 +19,13 @@ class Main extends React.Component {
         />)
     });
     return (
-      <>
-        <body>
-          <Container>
-            <Row>
-              <main>
-                {beasts}
-              </main>
-            </Row>
-          </Container>
-        </body>
-      </>
+        <Container>
+          <Row>
+            <main>
+              {beasts}
+            </main>
+          </Row>
+        </Container>
     );
   }
 }

@@ -18,7 +18,7 @@ class HornedBeast extends React.Component {
   }
 
   handleHeaderClick = () => {
-    this.props.handleOpenModal(this.props.name)
+    this.props.handleOpenModal(this.props.name);
   }
 
   render() {
@@ -32,10 +32,9 @@ class HornedBeast extends React.Component {
             <img
               src={this.props.imageURL}
               alt={this.props.keyword}
-              onClick={this.props.handleHeaderClick}
+              onClick={this.handleHeaderClick}
               style={{ maxHeight: '12rem', maxWidth: '12rem' }}
-            >{this.props.name}
-            </img>
+            />
             <p>{this.props.description}</p>
             <p>Number of Horns: {this.props.horns}</p>
           </article>
