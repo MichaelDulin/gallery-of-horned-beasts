@@ -15,23 +15,25 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false,
-      beastName: ''
-      // beastImgURL: '',
-      // beastDescription: ''
-    }
+      beastName: '',
+      beastImgURL: '',
+      beastDescription: ''
+    };
   }
 
   handleCloseModal = () => {
     this.setState({
       showModal: false
-    })
+    });
   }
 
-  handleOpenModal = (name) => {
+  handleOpenModal = (name, imageURL, description) => {
     this.setState({
       showModal: true,
-      beastName: name
-    })
+      beastName: name,
+      beastImgURL: imageURL,
+      beastDescription: description
+    });
   }
 
   render() {
@@ -47,14 +49,19 @@ class App extends React.Component {
         <Modal
           show={this.state.showModal}
           onHide={this.handleCloseModal}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
         >
-          <Modal.Header>
+          <Modal.Header closeButton>
             <Modal.Title>
-              {this.state.name}
+              {this.state.beastName}
             </Modal.Title>
           </Modal.Header>
-          {/* {this.state.imageURL}
-          {this.state.description} */}
+          <Modal.Body>
+          <img src={this.state.beastImgURL} alt={this.state.beastName}/>
+          </Modal.Body>
+          <Modal.Footer>{this.state.beastDescription}</Modal.Footer>
         </Modal>
       </>
     );
