@@ -37,3 +37,21 @@
   }
 }
 
+body {
+  background-color: rgb(191, 191, 191);
+}
+
+.modal-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-body img {
+  display: block;
+  max-width: 30rem;
+  min-height: 30rem;
+  width:auto;
+  height:auto;
+}

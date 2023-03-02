@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <>
         <header>
-          <h1>Gallery of Beasts</h1>
+          <h1>Gallery of Beasts{this.props.totalLikes}</h1>
         </header>
       </>
    );

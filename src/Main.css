@@ -1,7 +1,3 @@
-body {
-  background-color: rgb(191, 191, 191);
-}
-
 main {
   display: flex;
   flex-wrap: wrap;
@@ -12,6 +8,9 @@ main {
 article {
   background-color: rgb(228, 229, 230);
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  min-width: 18rem;
+  min-height:38rem;
 }
 
 header {
@@ -26,4 +25,33 @@ h1 {
   font-size: 80px;
   margin-bottom: 5rem;
   border-bottom: 2px solid gray;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.likeClicks {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.likeClicks p {
+  width: 6rem;
+  height: 2rem;
+}
+
+.likeButton {
+  background-color: rgb(145, 214, 247);
+  border-radius: 2rem;
+}
+
+
+.beastInfo {
+  margin-top: 2rem;
 }

@@ -6,32 +6,26 @@ import Row from 'react-bootstrap/Row';
 
 class Main extends React.Component {
   render() {
-
-    let beasts = [];
-    this.props.data.forEach((beast) => {
-      beasts.push(
+    let beasts = this.props.data.map((beast) => {
+      return (
         <HornedBeast
           name={beast.title}
           imageURL={beast.image_url}
           keyword={beast.keyword}
           description={beast.description}
           horns={beast.horns}
+          handleOpenModal={this.props.handleOpenModal}
           key={beast._id}
-        />
-      )
-    })
+        />)
+    });
     return (
-      <>
-        <body>
-          <Container>
-            <Row>
-              <main>
-                {beasts}
-              </main>
-            </Row>
-          </Container>
-        </body>
-      </>
+        <Container>
+          <Row>
+            <main>
+              {beasts}
+            </main>
+          </Row>
+        </Container>
     );
   }
 }
