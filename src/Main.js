@@ -12,7 +12,7 @@ export default function Main(props) {
     e.target.value === ""
       ? setFilteredBeasts(props.beasts)
       : setFilteredBeasts(
-          props.beasts.filter((beast) => e.target.value == beast.horns)
+          props.beasts.filter((beast) => e.target.value === String(beast.horns))
         );
   }
 
